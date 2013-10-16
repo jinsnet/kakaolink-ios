@@ -257,6 +257,7 @@
 		8EEA66B71547C65B0048DD0F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/external/yajl-objc/Example/TestAppIOS/Frameworks\"",
@@ -273,6 +274,7 @@
 		8EEA66B81547C65B0048DD0F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/external/yajl-objc/Example/TestAppIOS/Frameworks\"",

@@ -6,12 +6,12 @@
 #import "KakaoLinkCenter.h"
 
 static NSString *StringByAddingPercentEscapesForURLArgument(NSString *string) {
-	NSString *escapedString = (NSString *)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
-																				  (CFStringRef)string,
-																				  NULL,
-																				  (CFStringRef)@"!*'();:@&=+$,/?%#[]",
-																				  kCFStringEncodingUTF8);
-	return [escapedString autorelease];
+	NSString *escapedString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
+																									(CFStringRef)string,
+																									NULL,
+																									(CFStringRef)@"!*'();:@&=+$,/?%#[]",
+																									kCFStringEncodingUTF8));
+	return escapedString;
 }
 
 static NSString *HTTPArgumentsStringForParameters(NSDictionary *parameters) {
